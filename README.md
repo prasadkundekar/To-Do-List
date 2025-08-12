@@ -24,6 +24,7 @@ scroll.js # Scroll-to-top button functionality
 1️⃣ Clone the repository
 bash
 git clone https://github.com/your-username/todo-list-app.git
+
 2️⃣ Open the project
 Simply open the index.html file in your preferred web browser.
 
