@@ -199,3 +199,40 @@
       });
     }
 
+    startTypedAnimation();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var taskList = document.getElementById('taskList');
+      var taskActions = document.getElementById('taskActions');
+      init();
+
+      function checkTasksAndToggle() {
+        if (taskList && taskList.children.length > 0) {
+          taskActions.style.display = 'block';
+        } else {
+          taskActions.style.display = 'none';
+        }
+      }
+
+      checkTasksAndToggle();
+
+      var observer = new MutationObserver(function () {
+        checkTasksAndToggle();
+      });
+
+      var observerConfig = { childList: true };
+      observer.observe(taskList, observerConfig);
+    });
+  </script>
+
+  <section class="footer-down">
+    <div>
+      <marquee width="100%" direction="left">Developed and Designed By <b>Prasad Kundekar</b> | © All Rights Reserved
+      </marquee>
+    </div>
+  </section>
+</body>
+
+</html>
+
