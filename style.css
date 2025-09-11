@@ -858,5 +858,251 @@ select option {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  #addForm {
+    padding: 20px;
+  }
+
+  #item,
+  #priority,
+  #dueDate,
+  #description {
+    width: 100%;
+  }
+
+  #submitBtn,
+  #editTask {
+    width: 100%;
+  }
+}
+
+#addForm input {
+  border-radius: 30px;
+  max-height: 60px;
+  margin-right: 10px;
+}
+
+#priority {
+  padding: 7px;
+  max-height: 60px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border-style: none;
+  border: 2px solid rgba(70, 70, 70, 0.873);
+  transition: 0.3s ease-in;
+}
+
+.dark-mode #priority {
+  padding: 7px;
+  max-height: 60px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border-style: none;
+  border: 3px solid rgb(146, 56, 255);
+  transition: 0.3s ease-in;
+}
+#dueDate {
+  max-width: 150px;
+}
+
+#item {
+  max-width: 200px;
+}
+
+ul {
+  list-style-type: disc;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+ul.list-group {
+  width: auto;
+}
+
+li {
+  margin: 10px;
+}
+
+.voice-input {
+  border-radius: 30px;
+}
+
+.titleText {
+  color: #79c5ff;
+}
+
+.light-mode .footer-down {
+  flex-direction: column !important;
+  position: -webkit-sticky;
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+
+  color: rgb(101, 101, 101);
+  padding-top: 10px;
+  padding-left: 0px;
+  max-width: auto;
+  background: radial-gradient(2224px at 10.6% 8.8%, rgb(255, 255, 255) 0%, rgb(175, 215, 255) 100.2%);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+}
+.dark-mode .footer-down {
+  position: -webkit-sticky;
+  position: relative !important;
+  bottom: 0;
+  height: 5vh;
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-left: 0px;
+  max-width: auto;
+  background: rgba(193, 99, 255, 0.25);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.light-mode .inputcss {
+  width: 100%;
+  border-radius: 20px;
+  height: 40px;
+  padding: 0 20px;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.536);
+  border: 2px solid rgba(70, 70, 70, 0.873);
+  transition: 0.3s ease-in;
+  margin-left: 5px;
+}
+
+.dark-mode .inputcss {
+  width: 100%;
+  border-radius: 20px;
+  height: 40px;
+  padding: 0 20px;
+  border-style: none;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(146, 56, 255);
+  transition: 0.3s ease-in;
+}
+
+.checkbox:checked:before {
+  background-color: green;
+}
+
+.dark-mode .btn-outline-dark {
+  color: rgb(146, 56, 255);
+  border-color: rgb(146, 56, 255);
+}
+.dark-mode .btn-outline-dark:hover {
+  color: #fff;
+  background-color: rgb(146, 56, 255);
+  border-color: rgb(146, 56, 255);
+}
+
+.dark-mode .btn-dark {
+  color: #fff;
+  background-color: rgb(146, 56, 255);
+  border-color: rgb(146, 56, 255);
+}
+
+.dark-mode .btn-dark:hover {
+  color: #fff;
+  background-color: rgb(123, 52, 210);
+  border-color: rgb(123, 52, 210);
+}
+
+.dark-mode .btn-dark:not(:disabled):not(.disabled).active,
+.dark-mode .btn-dark:not(:disabled):not(.disabled):active,
+.dark-mode .show > .dark-mode .btn-dark.dropdown-toggle {
+  color: #fff;
+  background-color: rgb(123, 52, 210);
+  border-color: rgb(123, 52, 210);
+}
+
+.light-mode .custom-confirm,
+.light-mode .custom-confirm-all {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dark-mode .confirm-content,
+.dark-mode .confirm-content-all {
+  background: rgb(24, 24, 24);
+  padding: 20px;
+  top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.light-mode #myDropdown .a1 {
+  background: #00bfffd5;
+}
+.light-mode #myDropdown .a2 {
+  background: #0091dfd8;
+}
+.light-mode #myDropdown .a3 {
+  background: #006dcdcc;
+}
+.light-mode #myDropdown .a4 {
+  background: #0075cea5;
+}
+
+.dark-mode #myDropdown .a1 {
+  background: #8000ffd5;
+}
+.dark-mode #myDropdown .a2 {
+  background: #8d00dfd8;
+}
+.dark-mode #myDropdown .a3 {
+  background: #8c00cdcc;
+}
+.dark-mode #myDropdown .a4 {
+  background: #8d00cea5;
+}
+
+.light-mode #myDropdown {
+  color: rgba(1, 63, 97, 0.967);
+}
+
+.dark-mode #myDropdown {
+  color: rgba(47, 0, 65, 0.967);
+}
+
+#myDropdown a:hover{
+  color:white;
+}
+
+.github-icon{
+  position: absolute;
+    cursor: pointer;
+    top: 25px;
+    right: 35px;
+    bottom: 0px;
+    transition: all 0.4s ease 0s;
+}
+
+.light-mode .github-icon a i{
+  font-size: 50px;
+  color:black !important;
+}
+
+.dark-mode .github-icon a i{
+  font-size: 50px;
+  color:rgb(227, 227, 227) !important;
+}
+
   
   
