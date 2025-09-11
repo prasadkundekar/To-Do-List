@@ -582,5 +582,281 @@ h4 {
   }
 }
 
+@media screen and (max-width: 390px) {
+  .list-group-item {
+    padding: 0.3rem;
+  }
+
+  .list-group {
+    margin-top: 1rem;
+  }
+
+  .main_form .form_btn {
+    font-size: 0.7rem;
+    padding: 0.7rem 1rem;
+  }
+
+  #dueDate {
+    font-size: smaller;
+    width: 120px;
+    height: 35px;
+    margin: auto;
+    padding: 0;
+  }
+}
+body:not(.dark-mode)::-webkit-scrollbar {
+  width: 12px;
+  background-color: #dfe6e9;
+}
+
+body:not(.dark-mode)::-webkit-scrollbar-track {
+  border: 5px solid white;
+  background-color: #6c6c6c;
+}
+
+body:not(.dark-mode)::-webkit-scrollbar-thumb {
+  background-color: #74b9ff;
+  border-radius: 10px;
+}
+
+body.dark-mode::-webkit-scrollbar {
+  width: 12px;
+  background-color: #000000;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+  border: 5px solid rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: rgb(146, 56, 255);
+  border-radius: 10px;
+}
+/* Preloader Starts */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.writing-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  position: absolute;
+}
+.writing-loader * {
+  position: absolute;
+  color: #0081a7;
+}
+.writing-loader .file-text {
+  color: #0081a7;
+  opacity: 0;
+  animation: fileAppear-1 8s 0s linear infinite;
+  position: absolute;
+}
+@keyframes fileAppear-1 {
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.writing-loader .pen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -50px;
+  left: -25px;
+  width: 40px;
+  height: 40px;
+  animation: writing 3s linear infinite;
+}
+@keyframes writing {
+  from {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(100%, 0);
+  }
+  15% {
+    transform: translate(0%, 25%);
+  }
+  20% {
+    transform: translate(100%, 25%);
+  }
+  25% {
+    transform: translate(0%, 50%);
+  }
+  30% {
+    transform: translate(100%, 50%);
+  }
+  35% {
+    transform: translate(0%, 75%);
+  }
+  40% {
+    transform: translate(100%, 75%);
+  }
+  45% {
+    transform: translate(0%, 100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+}
+.writing-loader .pen-container .pen {
+  color: #000000;
+  font-size: 2.5rem;
+}
+/* Preloader Ends  */
+
+/*Task priority indicator*/
+.light-mode .task-priority-High {
+  border-left: 6px solid rgba(255, 0, 0, 0.474);
+}
+
+.light-mode .task-priority-Medium {
+  border-left: 6px solid rgba(255, 166, 0, 0.447);
+}
+
+.light-mode .task-priority-Low {
+  border-left: 6px solid rgba(0, 128, 0, 0.474);
+}
+
+.light-mode .task-completed {
+  text-decoration: line-through;
+  border-left: 6px solid rgba(8, 0, 255, 0.474);
+}
+
+.dark-mode .task-priority-High {
+  border-left: 6px solid rgba(255, 0, 0, 0.737);
+}
+
+.dark-mode .task-priority-Medium {
+  border-left: 6px solid rgba(255, 166, 0, 0.871);
+}
+
+.dark-mode .task-priority-Low {
+  border-left: 6px solid rgba(0, 189, 0, 0.795);
+}
+
+.dark-mode .task-completed {
+  text-decoration: line-through;
+  border-left: 6px solid rgba(174, 75, 255, 0.914);
+}
+
+/*Task priority indicator end*/
+
+option:hover {
+  background-color: white;
+  color: white;
+}
+
+select {
+  width: 150px;
+}
+
+select option {
+  width: 150px;
+}
+
+.light-mode #voice-command-button {
+  scale:1.25;
+  margin:10px;
+  background-color: #000000;
+  position: fixed;
+  bottom: 72px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer; 
+  border: none; 
+  outline: none; 
+  transition:  0.6s ease; 
+  box-shadow: #0000008b 0px 0px 6px 0px;
+}
+
+.light-mode #voice-command-button:hover{
+  box-shadow: #000000 0px 0px 10px 0px;
+}
+.dark-mode #voice-command-button i{
+  color: rgb(0, 0, 0) ;
+}
+.light-mode #voice-command-button i{
+  color: rgb(159, 221, 255) ;
+}
+
+
+.dark-mode #voice-command-button {
+  scale:1.2;
+  margin:10px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 72px;
+  right: 22px;
+  z-index: 1000;
+  transition:  0.4s ease; 
+  box-shadow: #b1b1b1 0px 0px 8px 0px;
+}
+.dark-mode #voice-command-button:hover{
+  background-color: #e5e5e5;
+  box-shadow: #b1b1b1 0px 0px 19px 0px;
+}
+/* new css for form */
+#item,
+#priority,
+#dueDate {
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+}
+#item {
+  width: 100%;
+  padding: 15px;
+}
+/* css for the priority selection */
+
+#dueDate {
+  cursor: pointer;
+}
+
+#description {
+  width: 100%;
+  padding: 15px;
+  text-overflow: ellipsis;
+  border-radius: 8px;
+  height: 80px;
+  resize: none;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#description::-webkit-scrollbar {
+  display: none;
+}
+
   
   
