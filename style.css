@@ -158,3 +158,95 @@ html {
   }
 }
 
+/* .switch:hover */
+.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+  .container-xl {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    /* Take remaining vertical space */
+  }
+  
+  .text {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 10px;
+    border-right: 5px solid black;
+    white-space: nowrap;
+    animation: typing 5s steps(12) infinite,
+    cursor 0.4s step-end infinite alternate;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 65%;
+    }
+  }
+  
+  .text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  body.dark-mode {
+    background: linear-gradient(
+      112.1deg,
+      rgba(0, 60, 255, 0.756) 11.4%,
+      rgb(63, 76, 119) 70.2%
+    );
+    color: #c0a5ff;
+  }
+  
+  body.dark-mode::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.9);
+    z-index: -1;
+  }
+  
+  
