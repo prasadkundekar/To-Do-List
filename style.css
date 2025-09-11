@@ -1,0 +1,160 @@
+/*  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+/* main title */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+
+
+body {
+  font-weight: 400;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  margin-bottom: -90px;
+  flex-direction: column;
+  
+  background: radial-gradient(
+    2224px at 10.6% 8.8%,
+    rgb(255, 255, 255) 0%,
+    rgb(153, 202, 251) 100.2%
+  );
+}
+
+.dark-mode .content-container{
+  min-height: 95vh;
+}
+
+.light-mode .content-container{
+  min-height: 95vh;
+  background: radial-gradient(2224px at 10.6% 8.8%, rgb(255, 255, 255) 0%, rgb(153, 202, 251) 100.2%);
+}
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+html {
+  scroll-behavior: smooth;
+}
+#myBtn {
+  scale:1.25;
+  margin:10px;
+  display: none; 
+  position: fixed; 
+  bottom: 75px;
+  left: 25px; 
+  z-index: 99;
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
+  width: 45px;
+  padding: 13px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: #6c6c6c 0px 0px 10px 0px;
+}
+
+#myBtn:hover {
+  filter: invert(100%);
+}
+
+.dark-mode #myBtn {
+  scale:1.25;
+  margin:10px;
+  display: none; 
+  position: fixed; 
+  bottom: 75px;
+  left: 25px; 
+  z-index: 99;
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
+  width: 45px;
+  padding: 13px;
+  height: 45px;
+  filter: invert(0%);
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: #6c6c6c 0px 0px 10px 0px;
+}
+
+.dark-mode  #myBtn:hover {
+    filter: invert(100%);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
