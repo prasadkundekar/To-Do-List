@@ -249,4 +249,214 @@ html {
     z-index: -1;
   }
   
+  .main {
+    position: relative;
+    width: 48rem;
+    height: 100%;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 2em;
+    background-clip: padding-box;
+  }
+  
+  .light-mode .main {
+    background: rgba(255, 255, 255, 0.447);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #000;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dark-mode .dropdown-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .dark-mode .main {
+    background: rgba(83, 83, 83, 0.25);
+    box-shadow: rgba(145, 56, 255, 0.35) 0px 30px 100px 0px;
+    border: 2px solid rgba(146, 56, 255, 0.711);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    color: #e8e8e8;
+  }
+  
+  .main {
+    position: relative;
+    width: 48rem;
+    height: 100%;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 2em;
+    backdrop-filter: blur(45px);
+    background-clip: padding-box;
+  }
+  
+  .list-group-item {
+    font-size: 1.3rem;
+    margin: 0.4rem;
+    text-align: left;
+    border-radius: 1rem !important;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: 0.75rem;
+    width: 80%;
+  }
+  
+  .list-group-item button {
+    margin: 0 0.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5rem;
+  }
+  
+  .list-group-item button ion-icon {
+    pointer-events: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .main h2,
+  h3 {
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 415px) {
+    .main_form .form_btn {
+      font-size: 1rem;
+      padding: 0.2rem 0.8rem;
+    }
+  
+    .main {
+      width: 100%;
+      height: 380px;
+      padding: 1rem;
+    }
+  
+    .main_form #item {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .main {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  .message {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+  
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .success-message {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+  }
+  
+  .danger-message {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+  }
+  
+  .form-check-input {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+  
+  #dueDate::placeholder {
+    color: #fff;
+  }
+  
+  #dueDate:hover::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  input[type="checkbox"]:not(.task-completed) {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000;
+    outline: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(1, 110, 225);
+  }
+  
+  input[type="checkbox"]:not(.task-completed)::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  input[type="checkbox"]:not(.task-completed):checked::before {
+    transform: translateX(100%);
+    background: #fff;
+  }
+  
   
